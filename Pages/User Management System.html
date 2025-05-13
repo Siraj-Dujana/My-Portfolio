@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=devsice-width, initial-scale=1.0">
+  <title>User Management System</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="light-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <h1 class="logo-light">
+            <span class="logo-s">S</span><span class="logo-d">D</span><span class="logo-dev">|Dev</span>
+          </h1>
+          <h1 class="logo-dark">
+            <span class="logo-s">S</span><span class="logo-d">D</span><span class="logo-dev"> |Dev</span>
+          </h1>
+        </a>
+
+
+
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="../index.html" class="nav-link">Home</a>
+            </li>
+
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+    <div class="main fade-in-section">
+
+
+      <div class="container fade-in-section">
+
+        <div class="project fade-in-section">
+
+          <h1 class="h1" id="project" align="center">User Management System</h1>
+
+          <div class="project-card-group">
+
+            <!-- Project Event Management System -->
+             
+     <div class="project-card fade-in-section">
+
+  <div class="project-card-banner">
+    <img src="./assets/images/blog-4.png" alt="User Management System" width="250"
+      class="project-banner-img">
+  </div>
+
+  <div class="project-content-wrapper">
+
+    <h3>
+      <a class="h3">
+        Description
+      </a>
+    </h3>
+    
+    <p class="project-text">
+      I developed a <strong>User Management System</strong> using full CRUD operations where administrators can
+      add, update, delete, and view user information. The project is built with <strong>Node.js</strong>,
+      <strong>Express.js</strong>, <strong>MongoDB</strong>, and a front-end using <strong>HTML</strong>,
+      <strong>CSS</strong>, and <strong>JavaScript</strong>.
+      <br><br>
+    </p>
+
+    <h3>
+      <a class="h3">
+        Features
+      </a>
+    </h3>
+      <p class="project-text">
+      The system includes secure login and registration features, and uses password hashing for safety.
+      Admins have access to manage all users, while users can view or edit their own profiles. Role-based access ensures
+      the right level of control for each user type.
+      <br><br>
+      This project helped me strengthen my understanding of backend APIs, MongoDB integration, and secure authentication, all while delivering a responsive and clean user interface.
+    </p>
+    <br><br>
+    <!-- Technology Tags -->
+    <button class="project-topic text-tiny">Node.js</button>
+    <button class="project-topic text-tiny">Express.js</button>
+    <button class="project-topic text-tiny">MongoDB</button>
+    <button class="project-topic text-tiny">JavaScript</button>
+    <button class="project-topic text-tiny">HTML</button>
+    <button class="project-topic text-tiny">CSS</button>
+
+    <!-- Live Demo Button -->
+    <div style="margin-top: 1rem;">
+      <a href="https://your-user-management-app-link.com" target="_blank" class="project-live-btn">
+        Live Demo
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <button id="backToTop" title="Go to top">↑</button>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- script for fade-in-section -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in-section');
+
+    const options = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -20px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Optional: only animate once
+      });
+    }, options);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+  <!-- script for back-to-top button -->
+  <script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

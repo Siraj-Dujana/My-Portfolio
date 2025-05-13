@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="light-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <h1 class="logo-light">
+            <span class="logo-s">S</span><span class="logo-d">D</span><span class="logo-dev">|Dev</span>
+          </h1>
+          <h1 class="logo-dark">
+            <span class="logo-s">S</span><span class="logo-d">D</span><span class="logo-dev"> |Dev</span>
+          </h1>
+        </a>
+
+
+
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="../index.html" class="nav-link">Home</a>
+            </li>
+
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+    <div class="main fade-in-section">
+
+
+      <div class="container fade-in-section">
+
+        <div class="project fade-in-section">
+
+          <h1 class="h1" id="project" align="center">Netflix Clone</h1>
+
+          <div class="project-card-group">
+
+            <!-- Netflix Clone -->
+            <div class="project-card fade-in-section">
+
+              <div class="project-card-banner">
+                <img src="../assets/images/projects/netflix.PNG" alt="Netflix Clone" width="250" class="project-banner-img">
+              </div>
+            
+              <div class="project-content-wrapper">
+            
+                <h3 class="h3">
+                  Description
+                </h3>
+            
+                <p class="project-text">
+                  Designed and developed a fully responsive <strong>Netflix Clone (Frontend Only)</strong> using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. The clone includes:
+                  <br><br>
+                  <strong>20+ Interactive Movie Cards</strong> with hover effects and dynamic content.
+                  <br><br>
+                  <strong>Responsive Design</strong> for seamless viewing on mobile and desktop.
+                  <br><br>
+                  <strong>Sleek Navigation Bar</strong> with categories like “Trending” and “Top Rated”.
+                  <br><br>
+                  <strong>Login Form with Validation</strong> to ensure correct user input.
+                  <br><br>
+                  This project showcases front-end development skills and creates a polished, user-friendly Netflix-like experience.
+                </p>
+            
+                <br>
+                <h3 class="h3">
+                  Tech:
+                </h3>
+                <!-- Technology Tags -->
+                <button class="project-topic text-tiny"><strong>HTML</strong></button>
+                <button class="project-topic text-tiny"><strong>CSS</strong></button>
+                <button class="project-topic text-tiny"><strong>JavaScript</strong></button>
+            
+                <div style="margin-top: 1rem;">
+                  <a href="https://your-netflix-clone-link.com" target="_blank" class="project-live-btn">
+                    🔗 Live Demo
+                  </a>
+                </div>
+            
+              </div>
+            
+            </div>
+            
+            
+            
+
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <button id="backToTop" title="Go to top">↑</button>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- script for fade-in-section -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in-section');
+
+    const options = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -20px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Optional: only animate once
+      });
+    }, options);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+  <!-- script for back-to-top button -->
+  <script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
